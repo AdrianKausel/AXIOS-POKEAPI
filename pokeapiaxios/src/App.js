@@ -9,7 +9,7 @@ function App() {
     const [pokes, setPokes] = useState([]);
     
     const PokeButton = () => {
-      axios.get("https://pokeapi.co/api/v2/pokemon/")
+      axios.get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=807")
       .then (response => {
         setPokes(response.data.results);
         console.log(response.data)
